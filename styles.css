@@ -1153,7 +1153,7 @@ section {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
+    transform: translateX(200%);
     transition: transform 0.3s ease;
     z-index: 1000;
 }

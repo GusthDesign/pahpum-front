@@ -243,28 +243,25 @@ document.addEventListener('DOMContentLoaded', function() {
         // heroSlider.addEventListener('mouseenter', stopAutoPlay);
         // heroSlider.addEventListener('mouseleave', startAutoPlay);
     }
-    
-    // Contact form functionality
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {    
-            
-            if (validateForm()) {
-                // Get form data
-                const formData = new FormData(this);
-                const data = Object.fromEntries(formData);
-                
-                // Here you would normally send the data to your server
-                console.log('Form submitted:', data);
-                
-                // Show success message
-                showToast();
-                
-                // Reset form
-                this.reset();
-            }
+
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
         });
-    }
+        if (response.ok) {
+            showToast("Mensagem enviada com sucesso!");
+            form.reset();
+        } else {
+            alert("Houve um erro ao enviar. Tente novamente.");
+        }
+    });
+
     
     // Phone number formatting
     const phoneField = document.getElementById('phone');
