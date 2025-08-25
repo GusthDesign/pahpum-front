@@ -247,8 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form functionality
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        contactForm.addEventListener('submit', function(e) {    
             
             if (validateForm()) {
                 // Get form data
