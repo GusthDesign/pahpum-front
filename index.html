@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pahpum Transportes - Pediu, Chegou!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!--Logo -->
+                <div class="nav-logo">
+                    <a href="#hero" class="logo-link">
+                        <img src="imagens/logo-pahpum-preta.svg" class="logo-header" alt="Logo Pahpum">
+
+                         <!--<span class="logo-text">PAHPUM</span>
+                        <span class="logo-subtitle">TRANSPORTES</span> -->
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#hero" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#differentials" class="nav-link">Diferenciais</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+
+                <!-- CTA Button -->
+                <div class="nav-cta">
+                    <a href="#contact" class="cta-nav-button">Orçamento</a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="mobile-menu-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero" id="hero">
+        <!-- Background Image Slider -->
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="imagens/agronegocio.png" alt="Imagem Agronegócio">
+            </div>
+            <div class="slide">
+                <img src="imagens/placasolar.png" alt="Imagem Placa Solar">
+            </div>
+            <div class="slide">
+                <img src="imagens/maquinas-e-equipamentos.png" alt="Imagem Máquinas e Equipamentos">
+            </div>
+            <div class="slide">
+                <img src="imagens/produtos-quimicos.png" alt="Imagem Produtos Quimicos">
+            </div>
+        </div>
+
+        <!-- Gradient Overlay -->
+        <div class="hero-bg-overlay"></div>
+
+        <!-- Navigation Arrows -->
+        <button class="slider-nav prev" onclick="changeSlide(-1)" aria-label="Imagem anterior">
+            &#8249;
+        </button>
+        <button class="slider-nav next" onclick="changeSlide(1)" aria-label="Próxima imagem">
+            &#8250;
+        </button>
+
+        <!-- Content -->
+        <div class="hero-content">
+            <div class="hero-text animate-fade-in">
+                
+                <h3 class="hero-subtitle-dynamic" id="heroSubtitle">
+                    Sistemas inteligentes para logística eficiente
+                </h3>
+                
+                <!-- Dynamic Content -->
+                <h2 class="hero-headline" id="heroTitle">
+                    Tecnologia Avançada
+                </h2>
+                
+                <!-- Dynamic Description -->
+                <p class="hero-description" id="heroDescription">
+                    Utilizamos tecnologia de ponta para garantir que sua carga chegue no destino com máxima segurança e agilidade.
+                </p>
+                
+                <!-- CTA Button -->
+                <div class="hero-cta">
+                    <button class="cta-button" onclick="scrollToSection('contact')">
+                        Solicite um Orçamento
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots Indicator -->
+        <div class="slider-dots">
+            <button class="dot active" onclick="currentSlide(1)"></button>
+            <button class="dot" onclick="currentSlide(2)"></button>
+            <button class="dot" onclick="currentSlide(3)"></button>
+            <button class="dot" onclick="currentSlide(4)"></button>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-wheel">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Text content -->
+                <div class="about-text">
+                    <div class="about-header">
+                        <h2 class="section-title">
+                            Especialistas em 
+                            <span class="text-orange">Transporte Rodoviário</span>
+                            <span class="text-gray">de Cargas</span>
+                        </h2>
+                    </div>
+                    
+                    <div class="about-content">
+                        <p>
+                            A <strong class="text-orange">Pahpum Transportes</strong> é uma empresa brasileira com expertise em logística e transporte rodoviário de cargas. Com uma frota moderna e equipe altamente qualificada, oferecemos soluções personalizadas para o agronegócio, aço, moldes, maquinário, alimentos e cargas frágeis.
+                        </p>
+                        
+                        <p>
+                            Nosso diferencial está no compromisso com a entrega no prazo, segurança da carga e rastreabilidade em tempo real. <strong>Levamos a sua carga aonde for preciso</strong>, com excelência e responsabilidade.
+                        </p>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Rastreabilidade</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Atendimento</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Nacional</div>
+                            <div class="stat-label">Cobertura</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="imagens/transporte-rodoviario2.jpg" alt="Pahpum Transportes - Tecnologia e Logística">
+                        <div class="image-decoration decoration-1"></div>
+                        <div class="image-decoration decoration-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">
+                    Soluções para <span class="text-orange">Todos os Tipos</span> de Carga
+                </h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Services grid -->
+            <div class="services-grid">
+               <div class="service-card">
+                    <div class="service-icon">
+                        <img src="imagens/servicos/agronegocio.png" alt="Agronegócio" class="service-icon">
+                    </div>
+                    <h3 class="service-title">Agronegócio</h3>
+                    <p class="service-description">Transporte de grãos, fertilizantes e produtos agrícolas com segurança.</p>
+                    <div class="service-link">
+                    
+                    </div>
+                </div>
+    
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="imagens/servicos/aço-e-moldes.png" alt="Aço e Moldes" class="service-icon">
+                    </div>
+                    <h3 class="service-title">Aço e Moldes</h3>
+                    <p class="service-description">Equipamentos pesados com estrutura adequada e suporte técnico.</p>
+                    <div class="service-link">
+                    
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="imagens/servicos/maquinarios.png" alt="Maquinário" class="service-icon">
+                    </div>
+                    <h3 class="service-title">Maquinário</h3>
+                    <p class="service-description">Movimentação de máquinas industriais com segurança e planejamento.</p>
+                    <div class="service-link">
+                        
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="imagens/servicos/alimentos.png" alt="Alimentos" class="service-icon">
+                    </div>
+                    <h3 class="service-title">Alimentos</h3>
+                    <p class="service-description">Transporte adequado para produtos perecíveis e não perecíveis.</p>
+                    <div class="service-link">
+                        
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="imagens/servicos/carga-frageis.png" alt="Carga Frágeis" class="service-icon">
+                    </div>
+                    <h3 class="service-title">Cargas Frágeis</h3>
+                    <p class="service-description">Cuidado redobrado do início ao fim da operação.</p>
+                    <div class="service-link">
+                       
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="imagens/servicos/produtos-quimicos.png" alt="Químicos" class="service-icon">
+                    </div>
+                    <h3 class="service-title">Químicos</h3>
+                    <p class="service-description">Transporte seguro e especializado de produtos químicos, garantindo integridade e conformidade.</p>
+                    <div class="service-link">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentials Section -->
+    <section id="differentials" class="differentials">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">
+                    Por que Escolher a <span class="text-orange">Pahpum?</span>
+                </h2>
+                <p class="section-description">
+                    Nossos diferenciais garantem que sua carga chegue no destino com segurança e no prazo certo.
+                </p>
+            </div>
+
+            <!-- Differentials grid -->
+            <div class="differentials-grid">
+                <div class="differential-card">
+                    <div class="differential-icon">📦</div>
+                    <h3 class="differential-title">Frota Moderna</h3>
+                    <p class="differential-description">Veículos novos e revisados periodicamente.</p>
+                    <div class="differential-accent"></div>
+                </div>
+
+                <div class="differential-card">
+                    <div class="differential-icon">🚚</div>
+                    <h3 class="differential-title">Rastreamento em Tempo Real</h3>
+                    <p class="differential-description">Acompanhe sua carga do embarque à entrega.</p>
+                    <div class="differential-accent"></div>
+                </div>
+
+                <div class="differential-card">
+                    <div class="differential-icon">⏱️</div>
+                    <h3 class="differential-title">Agilidade e Pontualidade</h3>
+                    <p class="differential-description">Compromisso com prazos e excelência operacional.</p>
+                    <div class="differential-accent"></div>
+                </div>
+
+                <div class="differential-card">
+                    <div class="differential-icon">🤝</div>
+                    <h3 class="differential-title">Atendimento Personalizado</h3>
+                    <p class="differential-description">Suporte próximo e eficiente para cada cliente.</p>
+                    <div class="differential-accent"></div>
+                </div>
+
+                <div class="differential-card">
+                    <div class="differential-icon">📍</div>
+                    <h3 class="differential-title">Atuação Nacional</h3>
+                    <p class="differential-description">Cobertura completa em todo o território brasileiro.</p>
+                    <div class="differential-accent"></div>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-icon">🛡️</div>
+                    <h3 class="differential-title">Segurança Garantida</h3>
+                    <p class="differential-description">Cada carga é transportada com protocolos de segurança rigorosos.</p>
+                    <div class="differential-accent"></div>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-icon">⚙️</div>
+                    <h3 class="differential-title">Flexibilidade de Serviços</h3>
+                    <p class="differential-description">Adaptamos o transporte às necessidades específicas de cada cliente.</p>
+                    <div class="differential-accent"></div>
+                </div>
+                
+                <div class="differential-card">
+                    <div class="differential-icon">🏆</div>
+                    <h3 class="differential-title">Experiência Comprovad</h3>
+                    <p class="differential-description">Anos de atuação garantindo segurança e confiabilidade.</p>
+                    <div class="differential-accent"></div>
+                </div>
+            </div>
+
+            <!-- Call to action -->
+            <div class="cta-section">
+                <div class="cta-card">
+                    <h3 class="cta-title">Pronto para começar?</h3>
+                    <p class="cta-description">Entre em contato e descubra como podemos ajudar seu negócio.</p>
+                    <button class="cta-secondary-button" onclick="scrollToSection('contact')">
+                        Falar com Especialista
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title white">
+                    Entre em <span class="text-orange">Contato</span> com a Gente
+                </h2>
+                <p class="section-description white">
+                    Estamos prontos para atender suas necessidades de transporte. Fale conosco!
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome *</label>
+                                <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Empresa</label>
+                                <input type="text" id="company" name="company" placeholder="Nome da empresa">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefone *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(XX) XXXXX-XXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cargoType">Tipo de Carga</label>
+                            <input type="text" id="cargoType" name="cargoType" placeholder="Ex: Agronegócio, Aço, Maquinário...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" required rows="4" placeholder="Descreva suas necessidades de transporte..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit-button">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-content">
+                                <h3>Endereço</h3>
+                                <p> R. Copacabana, 1127 - Floresta, Joinville - SC, 89211-388 </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-content">
+                                <h3>Telefone</h3>
+                                <p>(47) 9 9696-2575</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-content">
+                                <h3>E-mail</h3>
+                                <p>elionai.pahpum@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-content">
+                                <h3>WhatsApp</h3>
+                                <p>(47) 9 9696-2575</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map placeholder -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.3645987!2d-46.656!3d-23.564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3645987cdf587add!2sPahpum%20Transportes!5e0!3m2!1spt-BR!2sbr!4v1692870000000!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <p class="map-description">📍 Localização da sede da Pahpum Transportes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo and slogan -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="imagens/logo-pahpum-branca.svg" class="logo-header" alt="Logo Pahpum">
+                    </div>
+                    <p class="footer-slogan">Pediu, Chegou!</p>
+                    <p class="footer-description">
+                        Soluções em transporte rodoviário com agilidade, segurança e rastreamento em tempo real para todo o Brasil.
+                    </p>
+                </div>
+
+                <!-- Quick links -->
+                <div class="footer-links">
+                    <h4 class="footer-section-title">Links Rápidos</h4>
+                    <ul class="footer-nav">
+                        <li><button onclick="scrollToTop()">Home</button></li>
+                        <li><button onclick="scrollToSection('about')">Quem Somos</button></li>
+                        <li><button onclick="scrollToSection('services')">Serviços</button></li>
+                        <li><button onclick="scrollToSection('differentials')">Diferenciais</button></li>
+                        <li><button onclick="scrollToSection('contact')">Contato</button></li>
+                    </ul>
+                </div>
+
+                <!-- Social networks -->
+                    <div class="footer-social">
+            <h4 class="footer-section-title">Redes Sociais</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/pahpumtransportes/" target="_blank" rel="noopener noreferrer" class="social-item">
+                    <div class="social-icon instagram">
+                        <img src="imagens/instagram.png" class="social-icon" alt="Logo Instagram">
+                    </div>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-item">
+                    <div class="social-icon linkedin">
+                        <img src="imagens/linkedin.png" class="social-icon" alt="Logo LinkedIn">
+                    </div>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://wa.me/5547996962575" target="_blank" rel="noopener noreferrer" class="social-item">
+                    <div class="social-icon whatsapp">
+                        <img src="imagens/whatsapp.png" class="social-icon" alt="Logo WhatsApp">
+                    </div>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+
+            <!-- Bottom section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        © 2025 Pahpum Transportes. Todos os direitos reservados.
+                    </p>
+                    <div class="footer-legal">
+                        <button>Política de Privacidade</button>
+                        <button>Termos de Uso</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification 
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            Mensagem enviada com sucesso!
+        </div>
+    </div>-->
+
+    <script src="script.js"></script>
+</body>
+</html>
