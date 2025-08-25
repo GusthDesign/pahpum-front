@@ -316,3 +316,10 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 });
+function openWhatsApp() {
+    const phoneNumber = '5547996962575'; // Substitua pelo número de telefone desejado (incluindo o código do país, ex: 55 para Brasil)
+    const message = encodeURIComponent('');// Mensagem padrão (pode ser personalizada)
+    const url = `https://wa.me/${phoneNumber}?text=${message}`; 
+    window.open(url, '_blank');
+}
+                                                                                                                                                                                                                                                                                           
